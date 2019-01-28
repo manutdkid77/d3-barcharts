@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Progress Bar Chart</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: monospace;
+            margin: 0;
+        }
+
+        .axisGray path {
+            stroke: #979797;
+            stroke-width: 1.7px;
+        }
+
+        .axisGray text {
+            fill: black;
+            font-family: monospace;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        #legend2 {
+            overflow: hidden;
+        }
+
+        .legend2 {
+            float: left;
+            margin-right: 1em;
+        }
+
+        .key-dot {
+            display: inline-block;
+            height: 10px;
+            margin-right: .5em;
+            width: 10px;
+        }
+
+        .no-data {
+            background: #979797;
+        }
+
+        .assessments {
+            background: #038181;
+        }
+
+        .training {
+            background: #006666;
+        }
+
+        .policy {
+            background: #004C4C;
+        }
+
+        .gap {
+            background: #66B2B2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <svg width='960' height='500'></svg>
+
+    <div>
+        <div class="legend2">
+            <p class="country-name"><span class="key-dot no-data"></span>No Data</p>
+        </div>
+        <div class="legend2">
+            <p class="country-name"><span class="key-dot assessments"></span>Assessments</p>
+        </div>
+        <div class="legend2">
+            <p class="country-name"><span class="key-dot training"></span>Training</p>
+        </div>
+        <div class="legend2">
+            <p class="country-name"><span class="key-dot policy"></span>Policy Implementation</p>
+        </div>
+        <div class="legend2">
+            <p class="country-name"><span class="key-dot gap"></span>Gap</p>
+        </div>
+    </div>
+
+    <script src="scripts/d3.min.js"></script>
+
+    <script src='scripts/progress-barchart.js'></script>
+</body>
+
+</html>
